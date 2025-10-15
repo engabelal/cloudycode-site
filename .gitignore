@@ -1,0 +1,9 @@
+# Documentation (local only)
+README.md
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
