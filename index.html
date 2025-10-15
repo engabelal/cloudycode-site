@@ -25,6 +25,7 @@
         <div class="brand" data-animate>
           <img class="brand__logo" src="logo/Cloudecode-t.png" alt="Cloudecode.dev logo" />
         </div>
+
         <div class="header__actions">
           <div class="header__social">
             <a href="https://github.com/engabelal" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
@@ -72,7 +73,7 @@
       </section>
 
       <!-- Services Section -->
-      <section class="pillars" data-animate>
+      <section class="pillars" id="services" data-animate>
         <div class="section-header">
           <span class="section-badge">Core Capabilities</span>
           <h2 class="section-title">What We Build</h2>
@@ -80,15 +81,10 @@
         <div class="pillars__grid">
           <article class="pillar">
             <div class="pillar__icon" aria-hidden="true">
-              <svg viewBox="0 0 64 64">
-                <defs>
-                  <linearGradient id="grad-cicd" x1="0%" x2="100%" y1="0%" y2="100%">
-                    <stop offset="0%" stop-color="#72f5ff" />
-                    <stop offset="100%" stop-color="#4780ff" />
-                  </linearGradient>
-                </defs>
-                <path d="M32 6l24 12v28l-24 12-24-12V18z" fill="url(#grad-cicd)" opacity="0.85" />
-                <path d="M20 24h24v4H20zm0 10h24v4H20zm0 10h16v4H20z" fill="#050915" opacity="0.85" />
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+                <path d="M16.24 7.76l-2.12 2.12M16.24 16.24l-2.12-2.12M7.76 16.24l2.12-2.12M7.76 7.76l2.12 2.12"/>
               </svg>
             </div>
             <h3>CI/CD Pipeline Engineering</h3>
@@ -96,10 +92,11 @@
           </article>
           <article class="pillar">
             <div class="pillar__icon" aria-hidden="true">
-              <svg viewBox="0 0 64 64">
-                <circle cx="32" cy="32" r="26" fill="rgba(114,245,255,0.12)" />
-                <path d="M20 44l8-20 6 12 10-24 6 32z" fill="#72f5ff" opacity="0.8" />
-                <circle cx="32" cy="32" r="8" fill="#1c2440" opacity="0.92" />
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/>
+                <polyline points="17 21 17 13 7 13 7 21"/>
+                <polyline points="7 3 7 8 15 8"/>
+                <path d="M12 13v8M9 16h6M9 19h6"/>
               </svg>
             </div>
             <h3>Cloud Infrastructure</h3>
@@ -107,15 +104,10 @@
           </article>
           <article class="pillar">
             <div class="pillar__icon" aria-hidden="true">
-              <svg viewBox="0 0 64 64">
-                <defs>
-                  <linearGradient id="grad-observe" x1="0%" x2="100%" y1="50%" y2="50%">
-                    <stop offset="0%" stop-color="#9060ff" />
-                    <stop offset="100%" stop-color="#4cc9f0" />
-                  </linearGradient>
-                </defs>
-                <path d="M12 32s8-12 20-12 20 12 20 12-8 12-20 12-20-12-20-12z" fill="url(#grad-observe)" opacity="0.85" />
-                <circle cx="32" cy="32" r="6" fill="#081128" />
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                <path d="M2 17l10 5 10-5"/>
+                <path d="M2 12l10 5 10-5"/>
               </svg>
             </div>
             <h3>Automation & DevOps</h3>
@@ -337,7 +329,7 @@
       </section>
 
       <!-- Roadmap Section -->
-      <section class="roadmap" data-animate>
+      <section class="roadmap" id="roadmap" data-animate>
         <div class="section-header">
           <span class="section-badge">Roadmap</span>
           <h2 class="section-title">What's Next</h2>
@@ -387,7 +379,7 @@
     <footer class="footer">
       <div class="footer__content">
         <div class="footer__main">
-          <p class="footer__copyright">&copy; <span data-year></span> <a href="https://cloudycode.dev" class="footer__brand">cloudycode.dev</a> · Crafted with automation in mind.</p>
+          <p class="footer__copyright">&copy; <span data-year></span> <a href="https://cloudycode.dev" class="footer__brand">cloudycode.dev</a> · Building the future of DevOps.</p>
           <p class="footer__credit">Made with ❤️ by <a href="https://www.linkedin.com/in/engabelal/" target="_blank" rel="noopener" class="footer__author">Ahmed Belal</a></p>
         </div>
         <div class="footer__links">
