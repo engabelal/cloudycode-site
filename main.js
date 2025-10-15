@@ -5,54 +5,31 @@
     body.classList.add("is-ready");
   });
 
-  const countdownEl = document.querySelector("[data-countdown]");
+  // Newsletter form handler
+  const newsletterForm = document.getElementById("newsletter-form");
+  const newsletterSuccess = document.getElementById("newsletter-success");
 
-  if (countdownEl) {
-    const rawDate = (countdownEl.dataset.targetDate || "").trim();
-    let targetDate = rawDate ? new Date(rawDate) : null;
-
-    if (!targetDate || Number.isNaN(targetDate.valueOf())) {
-      targetDate = new Date();
-      targetDate.setMonth(targetDate.getMonth() + 2);
-      countdownEl.dataset.targetDate = targetDate.toISOString();
-    }
-
-    const refs = {
-      days: countdownEl.querySelector("[data-countdown-days]"),
-      hours: countdownEl.querySelector("[data-countdown-hours]"),
-      minutes: countdownEl.querySelector("[data-countdown-minutes]"),
-      seconds: countdownEl.querySelector("[data-countdown-seconds]"),
-    };
-
-    const format = (value) => String(value).padStart(2, "0");
-
-    const updateCountdown = () => {
-      const now = new Date();
-      const difference = targetDate - now;
-
-      if (difference <= 0) {
-        Object.values(refs).forEach((node) => {
-          if (node) node.textContent = "00";
-        });
-        countdownEl.classList.add("countdown--completed");
-        clearInterval(timer);
-        return;
-      }
-
-      const totalSeconds = Math.floor(difference / 1000);
-      const days = Math.floor(totalSeconds / 86400);
-      const hours = Math.floor((totalSeconds % 86400) / 3600);
-      const minutes = Math.floor((totalSeconds % 3600) / 60);
-      const seconds = totalSeconds % 60;
-
-      if (refs.days) refs.days.textContent = format(days);
-      if (refs.hours) refs.hours.textContent = format(hours);
-      if (refs.minutes) refs.minutes.textContent = format(minutes);
-      if (refs.seconds) refs.seconds.textContent = format(seconds);
-    };
-
-    updateCountdown();
-    const timer = setInterval(updateCountdown, 1000);
+  if (newsletterForm) {
+    newsletterForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      
+      const emailInput = document.getElementById("newsletter-email");
+      const email = emailInput.value;
+      
+      // Create mailto link
+      const subject = encodeURIComponent("Newsletter Subscription - Cloudycode.dev");
+      const body = encodeURIComponent(`New newsletter subscription request:\n\nEmail: ${email}\n\nFrom: Cloudycode.dev website`);
+      const mailtoLink = `mailto:eng.abelal@gmail.com?subject=${subject}&body=${body}`;
+      
+      // Open email client
+      window.location.href = mailtoLink;
+      
+      // Show success message
+      setTimeout(() => {
+        newsletterForm.style.display = "none";
+        newsletterSuccess.style.display = "flex";
+      }, 500);
+    });
   }
 
   if ("IntersectionObserver" in window) {
@@ -140,6 +117,33 @@
     });
     card.addEventListener("mouseleave", function() {
       this.style.zIndex = "1";
+    });
+  });
+
+  // Project filter functionality
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const projects = document.querySelectorAll(".project-card");
+
+  filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const filter = button.dataset.filter;
+      
+      // Update active button
+      filterButtons.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+      
+      // Filter projects
+      projects.forEach(project => {
+        const category = project.dataset.category;
+        
+        if (filter === "all" || category === filter) {
+          project.classList.remove("hidden");
+          project.classList.add("show");
+        } else {
+          project.classList.add("hidden");
+          project.classList.remove("show");
+        }
+      });
     });
   });
 })();
