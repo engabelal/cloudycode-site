@@ -36,7 +36,7 @@ body {
 }
 
 body {
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 50%, #e0f2fe 100%);
   color: var(--text-primary);
   line-height: 1.6;
@@ -323,7 +323,7 @@ body::before {
   font-size: clamp(1.2rem, 1.6vw, 1.5rem);
   color: var(--text-primary);
   font-weight: 600;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Sora", sans-serif;
   text-transform: lowercase;
   letter-spacing: 0.02em;
   white-space: nowrap;
@@ -514,24 +514,38 @@ body::before {
 }
 
 .hero__title {
-  font-family: "Space Grotesk", sans-serif;
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  line-height: 1.15;
+  font-family: "Sora", sans-serif;
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  line-height: 1.1;
   margin: 0;
-  font-weight: 700;
-  background: linear-gradient(135deg, var(--text-primary) 0%, var(--brand) 70%, var(--accent) 100%);
+  font-weight: 800;
+  background: linear-gradient(110deg, var(--text-primary) 0%, var(--text-primary) 35%, var(--brand) 50%, var(--accent) 65%, var(--brand) 80%, var(--text-primary) 100%);
+  background-size: 200% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  max-width: 20ch;
+  letter-spacing: -0.02em;
+  max-width: 16ch;
+  animation: titleShimmer 8s ease-in-out infinite;
+  position: relative;
+}
+
+@keyframes titleShimmer {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 .hero__subtitle {
-  font-size: clamp(1.1rem, 1.6vw, 1.25rem);
+  font-size: clamp(1.15rem, 1.8vw, 1.35rem);
   color: var(--text-muted);
   margin: 0;
-  max-width: 55ch;
-  line-height: 1.7;
+  max-width: 50ch;
+  line-height: 1.65;
+  font-weight: 500;
 }
 
 .hero__actions {
@@ -604,11 +618,12 @@ body::before {
 }
 
 .newsletter__title {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Sora", sans-serif;
   font-size: 1.8rem;
   font-weight: 700;
   color: var(--text-primary);
   margin: 0 0 12px 0;
+  letter-spacing: -0.01em;
 }
 
 .newsletter__description {
@@ -779,12 +794,13 @@ body::before {
 }
 
 .section-title {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Sora", sans-serif;
   font-size: clamp(2rem, 3.5vw, 2.8rem);
   font-weight: 700;
   color: var(--text-primary);
   margin: 0;
   line-height: 1.2;
+  letter-spacing: -0.01em;
 }
 
 .section-description {
@@ -883,12 +899,13 @@ body::before {
 }
 
 .project-card__title {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Sora", sans-serif;
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text-primary);
   margin: 0;
   line-height: 1.3;
+  letter-spacing: -0.01em;
 }
 
 .project-card__description {
@@ -1073,9 +1090,10 @@ body::before {
 .pillar h3 {
   margin: 0;
   font-size: 1.3rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text-primary);
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Sora", sans-serif;
+  letter-spacing: -0.01em;
 }
 
 .pillar p {

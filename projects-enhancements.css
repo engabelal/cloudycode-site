@@ -34,45 +34,7 @@
   box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
 
-/* Featured Badge */
-.project-card__featured {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  padding: 6px 14px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #fbbf24, #f59e0b);
-  color: #ffffff;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.4);
-  z-index: 2;
-  animation: featuredPulse 2s ease-in-out infinite;
-}
 
-@keyframes featuredPulse {
-  0%, 100% {
-    transform: scale(1);
-    box-shadow: 0 4px 12px rgba(251, 191, 36, 0.4);
-  }
-  50% {
-    transform: scale(1.05);
-    box-shadow: 0 6px 16px rgba(251, 191, 36, 0.6);
-  }
-}
-
-/* Enhanced Project Card */
-.project-card.featured {
-  border-color: rgba(251, 191, 36, 0.3);
-}
-
-.project-card.featured:hover {
-  border-color: rgba(251, 191, 36, 0.5);
-  box-shadow: 0 20px 60px rgba(251, 191, 36, 0.2);
-  transform: translateY(-10px) scale(1.02);
-}
 
 /* Hide/Show Animation */
 .project-card.hidden {
@@ -105,10 +67,5 @@
     font-size: 0.85rem;
   }
   
-  .project-card__featured {
-    top: 12px;
-    right: 12px;
-    padding: 5px 12px;
-    font-size: 0.7rem;
-  }
+
 }
