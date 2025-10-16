@@ -17,6 +17,10 @@
   
   // Start typing immediately
   typeWriter();
+  
+  // Prevent scroll during loading
+  body.style.overflow = "hidden";
+  window.scrollTo(0, 0);
 
   window.addEventListener("load", () => {
     body.classList.add("is-ready");
@@ -26,6 +30,8 @@
       loaderWrapper.classList.add("loaded");
       setTimeout(() => {
         loaderWrapper.style.display = "none";
+        body.style.overflow = "";
+        window.scrollTo(0, 0);
       }, 800);
     }, 1800);
   });
