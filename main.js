@@ -92,7 +92,7 @@
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.1 }
     );
 
     document.querySelectorAll("[data-animate]").forEach((section) => {
