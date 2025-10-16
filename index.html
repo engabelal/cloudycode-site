@@ -25,6 +25,8 @@
     
     <div class="scroll-progress"></div>
     
+    <div class="beta-badge-fixed">v2.3-BETA</div>
+    
     <div class="nebula" aria-hidden="true">
       <span class="orb orb--one"></span>
       <span class="orb orb--two"></span>
@@ -65,40 +67,53 @@
       <!-- Hero Section -->
       <section class="hero" data-animate>
         <div class="hero__content">
-          <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; align-items: center;">
-            <span class="hero__badge">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-              </svg>
-              Cloud Automation Factory
-            </span>
-            <span class="hero__badge" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(251, 191, 36, 0.1)); border-color: rgba(245, 158, 11, 0.3); color: #f59e0b;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-              </svg>
-              Beta Version
-            </span>
+          <div class="hero__left">
+            <h1 class="hero__title">
+              Ship <span class="hero__title-emphasis">FASTER</span><br>
+              Scale <span class="hero__title-emphasis">SMARTER</span>
+            </h1>
+            
+            <div class="hero__divider"></div>
+            
+            <p class="hero__subtitle">
+              Automate your infrastructure. Deploy with confidence. Scale without limits.
+            </p>
+            
+            <div class="hero__actions">
+              <a class="cta cta--primary cta--large" href="#projects">
+                <span>View Projects</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <a class="cta cta--secondary" href="mailto:eng.abelal@gmail.com">
+                <span>Contact Me</span>
+              </a>
+            </div>
           </div>
-          <h1 class="hero__title">Ship Faster. Scale Smarter.</h1>
-          <p class="hero__subtitle">
-            Production-ready cloud automation that eliminates manual work—from infrastructure as code to zero-downtime deployments.
-          </p>
-          <div class="hero__actions">
-            <a class="cta cta--primary cta--large" href="#projects">
-              <span>View Projects</span>
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </a>
-            <a class="cta cta--secondary" href="mailto:eng.abelal@gmail.com">
-              <span>Contact Me</span>
-            </a>
-          </div>
-          <div class="scroll-indicator" style="display: flex; flex-direction: column; align-items: center; gap: 12px; margin-top: 48px;">
-            <span class="scroll-indicator__text" style="font-size: 0.85rem; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em;">Scroll Down</span>
-            <svg class="scroll-indicator__arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2.5" style="animation: bounceDown 2s ease-in-out infinite;">
-              <path d="M12 5v14M19 12l-7 7-7-7"/>
-            </svg>
+          
+          <div class="hero__right">
+            <div class="hero__visual" id="hero-terminal">
+              <div class="hero__visual-header">
+                <div class="hero__visual-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="hero__visual-title">zsh</div>
+              </div>
+              <div class="hero__visual-body" id="terminal-body">
+                <div class="terminal-prompt-line">
+                  <span class="term-prompt">~/deploy</span>
+                  <span class="term-git">git:(main)</span>
+                  <span class="term-env">aws:prod</span>
+                </div>
+                <div class="terminal-command-line">
+                  <span class="term-arrow">❯</span>
+                  <span class="terminal-command" id="terminal-cmd"></span>
+                  <span class="terminal-cursor" id="cursor">_</span>
+                </div>
+                <div class="terminal-output" id="terminal-output" style="display: none;"></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -114,35 +129,49 @@
           </div>
           
           <div style="max-width: 950px; margin: 48px auto 0;">
-            <div style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.06), rgba(139, 92, 246, 0.06)); border: 2px solid rgba(59, 130, 246, 0.2); border-radius: 20px; padding: 48px 40px; margin-bottom: 40px;">
-              <p style="color: var(--text-primary); font-size: 1.15rem; line-height: 1.9; margin: 0; font-weight: 500; text-align: left;">
+            <div style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.06), rgba(139, 92, 246, 0.06)); border: 2px solid rgba(59, 130, 246, 0.2); border-radius: 20px; padding: 40px 36px; margin-bottom: 40px;">
+              <p style="color: var(--text-primary); font-size: 1.08rem; line-height: 1.75; margin: 0; font-weight: 500; text-align: left;">
                 I've always been passionate about <strong style="color: var(--brand); font-weight: 700;">coding and automation</strong>. Throughout my career managing enterprise infrastructure, I constantly built scripts and automated workflows to solve real problems. That's when I discovered <strong style="color: var(--brand); font-weight: 700;">Cloud & DevOps</strong>—and found my true passion. <span style="color: var(--accent); font-weight: 600;">It's where infrastructure meets code, and where I build systems that eliminate manual work and scale effortlessly.</span>
               </p>
             </div>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px; margin-bottom: 40px;">
-              <div style="background: var(--bg-elevated); border: 2px solid rgba(59, 130, 246, 0.15); border-radius: 18px; padding: 32px; text-align: left; transition: transform 0.3s ease, border-color 0.3s ease;">
-                <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px;">
-                  <div style="width: 52px; height: 52px; border-radius: 14px; background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(14, 165, 233, 0.2)); display: flex; align-items: center; justify-content: center; color: var(--brand); font-size: 26px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; margin-bottom: 40px;">
+              <div class="about-skill-card">
+                <div class="about-skill-header">
+                  <div class="about-skill-icon">
                     <i class="fas fa-cloud"></i>
                   </div>
-                  <h4 style="margin: 0; font-family: 'Sora', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text-primary);">Cloud & DevOps</h4>
+                  <h4>Cloud & DevOps</h4>
                 </div>
-                <p style="color: var(--text-muted); font-size: 0.98rem; line-height: 1.7; margin: 0;">
-                  AWS • Azure • Terraform • Ansible • Docker • Kubernetes • CI/CD (GitHub Actions, Jenkins) • Infrastructure as Code • GitOps
-                </p>
+                <div class="about-skill-tags">
+                  <span>AWS</span>
+                  <span>Azure</span>
+                  <span>Terraform</span>
+                  <span>Ansible</span>
+                  <span>Docker</span>
+                  <span>Kubernetes</span>
+                  <span>GitHub Actions</span>
+                  <span>Jenkins</span>
+                  <span>GitOps</span>
+                </div>
               </div>
               
-              <div style="background: var(--bg-elevated); border: 2px solid rgba(139, 92, 246, 0.15); border-radius: 18px; padding: 32px; text-align: left; transition: transform 0.3s ease, border-color 0.3s ease;">
-                <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px;">
-                  <div style="width: 52px; height: 52px; border-radius: 14px; background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(168, 85, 247, 0.2)); display: flex; align-items: center; justify-content: center; color: var(--secondary); font-size: 26px;">
+              <div class="about-skill-card">
+                <div class="about-skill-header">
+                  <div class="about-skill-icon about-skill-icon--secondary">
                     <i class="fas fa-server"></i>
                   </div>
-                  <h4 style="margin: 0; font-family: 'Sora', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text-primary);">Infrastructure</h4>
+                  <h4>Infrastructure</h4>
                 </div>
-                <p style="color: var(--text-muted); font-size: 0.98rem; line-height: 1.7; margin: 0;">
-                  VMware vSphere • Cisco Networking • Linux/Windows • Data Center Design • Disaster Recovery • High Availability • Enterprise Optimization
-                </p>
+                <div class="about-skill-tags">
+                  <span>VMware vSphere</span>
+                  <span>Cisco Networking</span>
+                  <span>Linux</span>
+                  <span>Windows Server</span>
+                  <span>Data Center Design</span>
+                  <span>Disaster Recovery</span>
+                  <span>High Availability</span>
+                </div>
               </div>
             </div>
             
@@ -157,28 +186,28 @@
               <div style="width: 56px; height: 56px; margin: 0 auto 16px; border-radius: 12px; background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(99, 102, 241, 0.15)); display: flex; align-items: center; justify-content: center;">
                 <i class="fas fa-briefcase" style="font-size: 24px; color: var(--brand);"></i>
               </div>
-              <div style="font-family: 'Sora', sans-serif; font-size: 2.5rem; font-weight: 800; color: var(--brand); margin-bottom: 8px; letter-spacing: -0.02em;">12+</div>
+              <div style="font-family: 'Sora', sans-serif; font-size: 2.2rem; font-weight: 800; color: var(--brand); margin-bottom: 8px; letter-spacing: -0.02em;">12+</div>
               <div style="font-size: 0.9rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Years of Experience</div>
             </div>
             <div style="background: var(--bg-elevated); border: 2px solid rgba(59, 130, 246, 0.12); border-radius: 16px; padding: 32px 24px; text-align: center; transition: all 0.3s ease;">
               <div style="width: 56px; height: 56px; margin: 0 auto 16px; border-radius: 12px; background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(99, 102, 241, 0.15)); display: flex; align-items: center; justify-content: center;">
                 <i class="fas fa-server" style="font-size: 24px; color: var(--brand);"></i>
               </div>
-              <div style="font-family: 'Sora', sans-serif; font-size: 2.5rem; font-weight: 800; color: var(--brand); margin-bottom: 8px; letter-spacing: -0.02em;">99.9%</div>
+              <div style="font-family: 'Sora', sans-serif; font-size: 2.2rem; font-weight: 800; color: var(--brand); margin-bottom: 8px; letter-spacing: -0.02em;">99.9%</div>
               <div style="font-size: 0.9rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">System Uptime</div>
             </div>
             <div style="background: var(--bg-elevated); border: 2px solid rgba(59, 130, 246, 0.12); border-radius: 16px; padding: 32px 24px; text-align: center; transition: all 0.3s ease;">
               <div style="width: 56px; height: 56px; margin: 0 auto 16px; border-radius: 12px; background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(99, 102, 241, 0.15)); display: flex; align-items: center; justify-content: center;">
                 <i class="fas fa-tachometer-alt" style="font-size: 24px; color: var(--brand);"></i>
               </div>
-              <div style="font-family: 'Sora', sans-serif; font-size: 2.5rem; font-weight: 800; color: var(--brand); margin-bottom: 8px; letter-spacing: -0.02em;">+30%</div>
+              <div style="font-family: 'Sora', sans-serif; font-size: 2.2rem; font-weight: 800; color: var(--brand); margin-bottom: 8px; letter-spacing: -0.02em;">+30%</div>
               <div style="font-size: 0.9rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Performance Improvement</div>
             </div>
             <div style="background: var(--bg-elevated); border: 2px solid rgba(59, 130, 246, 0.12); border-radius: 16px; padding: 32px 24px; text-align: center; transition: all 0.3s ease;">
               <div style="width: 56px; height: 56px; margin: 0 auto 16px; border-radius: 12px; background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(99, 102, 241, 0.15)); display: flex; align-items: center; justify-content: center;">
                 <i class="fas fa-chart-line" style="font-size: 24px; color: var(--brand);"></i>
               </div>
-              <div style="font-family: 'Sora', sans-serif; font-size: 2.5rem; font-weight: 800; color: var(--brand); margin-bottom: 8px; letter-spacing: -0.02em;">-20%</div>
+              <div style="font-family: 'Sora', sans-serif; font-size: 2.2rem; font-weight: 800; color: var(--brand); margin-bottom: 8px; letter-spacing: -0.02em;">-20%</div>
               <div style="font-size: 0.9rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Infrastructure Costs</div>
             </div>
           </div>
@@ -523,7 +552,7 @@
           <a href="https://www.linkedin.com/in/engabelal/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
         <div class="footer__version">
-          <span>v2.1.0-beta</span>
+          <span>v2.3.0-beta</span>
         </div>
       </div>
     </footer>
