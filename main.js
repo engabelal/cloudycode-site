@@ -1,8 +1,33 @@
 (function () {
   const body = document.body;
+  const loaderWrapper = document.querySelector(".loader-wrapper");
+  const typingCode = document.getElementById("typing-code");
+  
+  // Typing animation
+  const text = "< Loading Cloudycode />";
+  let index = 0;
+  
+  function typeWriter() {
+    if (index < text.length) {
+      typingCode.textContent = text.substring(0, index + 1);
+      index++;
+      setTimeout(typeWriter, 80);
+    }
+  }
+  
+  // Start typing immediately
+  typeWriter();
 
   window.addEventListener("load", () => {
     body.classList.add("is-ready");
+    
+    // Hide loader after animation completes
+    setTimeout(() => {
+      loaderWrapper.classList.add("loaded");
+      setTimeout(() => {
+        loaderWrapper.style.display = "none";
+      }, 800);
+    }, 1800);
   });
 
   // Newsletter form handler
