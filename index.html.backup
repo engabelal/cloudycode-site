@@ -103,85 +103,34 @@
         </div>
       </section>
 
-      <!-- About Section -->
-      <section class="about-section" id="about" data-animate>
-        <div class="about">
-          <div class="section-header">
-            <span class="section-badge">About Me</span>
-            <h2 class="section-title">Ahmed Belal</h2>
-            <h3 style="font-family: 'Sora', sans-serif; font-size: 1.5rem; font-weight: 600; color: var(--brand); margin: 12px 0 20px 0; letter-spacing: -0.01em;">Senior Cloud & Infrastructure Engineer</h3>
-            <p class="section-description" style="max-width: 750px;">I turn infrastructure chaos into automated systems. With 12+ years of experience building and scaling enterprise environments across KSA and Egypt—from traditional data centers to cloud-native architectures.</p>
-          </div>
-          
-          <div style="max-width: 950px; margin: 48px auto 0;">
-            <div style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.06), rgba(139, 92, 246, 0.06)); border: 2px solid rgba(59, 130, 246, 0.2); border-radius: 20px; padding: 48px 40px; margin-bottom: 40px;">
-              <p style="color: var(--text-primary); font-size: 1.15rem; line-height: 1.9; margin: 0; font-weight: 500; text-align: left;">
-                I've always been passionate about <strong style="color: var(--brand); font-weight: 700;">coding and automation</strong>. Throughout my career managing enterprise infrastructure, I constantly built scripts and automated workflows to solve real problems. That's when I discovered <strong style="color: var(--brand); font-weight: 700;">Cloud & DevOps</strong>—and found my true passion. <span style="color: var(--accent); font-weight: 600;">It's where infrastructure meets code, and where I build systems that eliminate manual work and scale effortlessly.</span>
-              </p>
+      <!-- Services Section -->
+      <section class="pillars" id="services" data-animate>
+        <div class="section-header">
+          <span class="section-badge">Core Capabilities</span>
+          <h2 class="section-title">What We Build</h2>
+        </div>
+        <div class="pillars__grid">
+          <article class="pillar">
+            <div class="pillar__icon" aria-hidden="true">
+              <i class="fas fa-rocket" style="font-size: 36px;"></i>
             </div>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px; margin-bottom: 40px;">
-              <div style="background: var(--bg-elevated); border: 2px solid rgba(59, 130, 246, 0.15); border-radius: 18px; padding: 32px; text-align: left; transition: transform 0.3s ease, border-color 0.3s ease;">
-                <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px;">
-                  <div style="width: 52px; height: 52px; border-radius: 14px; background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(14, 165, 233, 0.2)); display: flex; align-items: center; justify-content: center; color: var(--brand); font-size: 26px;">
-                    <i class="fas fa-cloud"></i>
-                  </div>
-                  <h4 style="margin: 0; font-family: 'Sora', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text-primary);">Cloud & DevOps</h4>
-                </div>
-                <p style="color: var(--text-muted); font-size: 0.98rem; line-height: 1.7; margin: 0;">
-                  AWS • Azure • Terraform • Ansible • Docker • Kubernetes • CI/CD (GitHub Actions, Jenkins) • Infrastructure as Code • GitOps
-                </p>
-              </div>
-              
-              <div style="background: var(--bg-elevated); border: 2px solid rgba(139, 92, 246, 0.15); border-radius: 18px; padding: 32px; text-align: left; transition: transform 0.3s ease, border-color 0.3s ease;">
-                <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px;">
-                  <div style="width: 52px; height: 52px; border-radius: 14px; background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(168, 85, 247, 0.2)); display: flex; align-items: center; justify-content: center; color: var(--secondary); font-size: 26px;">
-                    <i class="fas fa-server"></i>
-                  </div>
-                  <h4 style="margin: 0; font-family: 'Sora', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text-primary);">Infrastructure</h4>
-                </div>
-                <p style="color: var(--text-muted); font-size: 0.98rem; line-height: 1.7; margin: 0;">
-                  VMware vSphere • Cisco Networking • Linux/Windows • Data Center Design • Disaster Recovery • High Availability • Enterprise Optimization
-                </p>
-              </div>
+            <h3>CI/CD Pipeline Engineering</h3>
+            <p>Battle-tested CI/CD architectures with automated testing, deployment strategies, and GitOps workflows for high-velocity teams.</p>
+          </article>
+          <article class="pillar">
+            <div class="pillar__icon" aria-hidden="true">
+              <i class="fas fa-cloud" style="font-size: 36px;"></i>
             </div>
-            
-            <div style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(5, 150, 105, 0.08)); border: 2px solid rgba(16, 185, 129, 0.2); border-radius: 18px; padding: 40px; text-align: center;">
-              <p style="color: var(--text-primary); font-size: 1.08rem; line-height: 1.8; margin: 0; font-weight: 500; max-width: 750px; margin: 0 auto;">
-                Worked with leading companies in <strong style="color: var(--success); font-weight: 700;">telecom, utilities, and financial sectors</strong>—building and optimizing mission-critical infrastructure that keeps their operations running 24/7.
-              </p>
+            <h3>Cloud Infrastructure</h3>
+            <p>Scalable infrastructure patterns for AWS and Kubernetes—built with Terraform, designed for reliability, security, and cost optimization.</p>
+          </article>
+          <article class="pillar">
+            <div class="pillar__icon" aria-hidden="true">
+              <i class="fas fa-robot" style="font-size: 36px;"></i>
             </div>
-          </div>
-          <div style="margin-top: 48px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 1000px; margin-left: auto; margin-right: auto;">
-            <div style="background: var(--bg-elevated); border: 2px solid rgba(59, 130, 246, 0.12); border-radius: 16px; padding: 32px 24px; text-align: center; transition: all 0.3s ease;">
-              <div style="width: 56px; height: 56px; margin: 0 auto 16px; border-radius: 12px; background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(99, 102, 241, 0.15)); display: flex; align-items: center; justify-content: center;">
-                <i class="fas fa-briefcase" style="font-size: 24px; color: var(--brand);"></i>
-              </div>
-              <div style="font-family: 'Sora', sans-serif; font-size: 2.5rem; font-weight: 800; color: var(--brand); margin-bottom: 8px; letter-spacing: -0.02em;">12+</div>
-              <div style="font-size: 0.9rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Years of Experience</div>
-            </div>
-            <div style="background: var(--bg-elevated); border: 2px solid rgba(59, 130, 246, 0.12); border-radius: 16px; padding: 32px 24px; text-align: center; transition: all 0.3s ease;">
-              <div style="width: 56px; height: 56px; margin: 0 auto 16px; border-radius: 12px; background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(99, 102, 241, 0.15)); display: flex; align-items: center; justify-content: center;">
-                <i class="fas fa-server" style="font-size: 24px; color: var(--brand);"></i>
-              </div>
-              <div style="font-family: 'Sora', sans-serif; font-size: 2.5rem; font-weight: 800; color: var(--brand); margin-bottom: 8px; letter-spacing: -0.02em;">99.9%</div>
-              <div style="font-size: 0.9rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">System Uptime</div>
-            </div>
-            <div style="background: var(--bg-elevated); border: 2px solid rgba(59, 130, 246, 0.12); border-radius: 16px; padding: 32px 24px; text-align: center; transition: all 0.3s ease;">
-              <div style="width: 56px; height: 56px; margin: 0 auto 16px; border-radius: 12px; background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(99, 102, 241, 0.15)); display: flex; align-items: center; justify-content: center;">
-                <i class="fas fa-tachometer-alt" style="font-size: 24px; color: var(--brand);"></i>
-              </div>
-              <div style="font-family: 'Sora', sans-serif; font-size: 2.5rem; font-weight: 800; color: var(--brand); margin-bottom: 8px; letter-spacing: -0.02em;">+30%</div>
-              <div style="font-size: 0.9rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Performance Improvement</div>
-            </div>
-            <div style="background: var(--bg-elevated); border: 2px solid rgba(59, 130, 246, 0.12); border-radius: 16px; padding: 32px 24px; text-align: center; transition: all 0.3s ease;">
-              <div style="width: 56px; height: 56px; margin: 0 auto 16px; border-radius: 12px; background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(99, 102, 241, 0.15)); display: flex; align-items: center; justify-content: center;">
-                <i class="fas fa-chart-line" style="font-size: 24px; color: var(--brand);"></i>
-              </div>
-              <div style="font-family: 'Sora', sans-serif; font-size: 2.5rem; font-weight: 800; color: var(--brand); margin-bottom: 8px; letter-spacing: -0.02em;">-20%</div>
-              <div style="font-size: 0.9rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Infrastructure Costs</div>
-            </div>
-          </div>
+            <h3>Automation & DevOps</h3>
+            <p>End-to-end automation solutions—from configuration management to infrastructure provisioning—that eliminate manual toil.</p>
+          </article>
         </div>
       </section>
 
@@ -271,37 +220,6 @@
             </div>
             <h3>Git</h3>
           </div>
-        </div>
-      </section>
-
-      <!-- Services Section -->
-      <section class="pillars" id="services" data-animate>
-        <div class="section-header">
-          <span class="section-badge">Core Capabilities</span>
-          <h2 class="section-title">What We Build</h2>
-        </div>
-        <div class="pillars__grid">
-          <article class="pillar">
-            <div class="pillar__icon" aria-hidden="true">
-              <i class="fas fa-rocket" style="font-size: 36px;"></i>
-            </div>
-            <h3>CI/CD Pipeline Engineering</h3>
-            <p>Battle-tested CI/CD architectures with automated testing, deployment strategies, and GitOps workflows for high-velocity teams.</p>
-          </article>
-          <article class="pillar">
-            <div class="pillar__icon" aria-hidden="true">
-              <i class="fas fa-cloud" style="font-size: 36px;"></i>
-            </div>
-            <h3>Cloud Infrastructure</h3>
-            <p>Scalable infrastructure patterns for AWS and Kubernetes—built with Terraform, designed for reliability, security, and cost optimization.</p>
-          </article>
-          <article class="pillar">
-            <div class="pillar__icon" aria-hidden="true">
-              <i class="fas fa-robot" style="font-size: 36px;"></i>
-            </div>
-            <h3>Automation & DevOps</h3>
-            <p>End-to-end automation solutions—from configuration management to infrastructure provisioning—that eliminate manual toil.</p>
-          </article>
         </div>
       </section>
 
@@ -462,24 +380,65 @@
         </div>
       </section>
 
-      <!-- Achievements Section -->
-      <section class="roadmap" id="achievements" data-animate>
+      <!-- About Section -->
+      <section class="about-section" id="about" data-animate>
+        <div class="about">
+          <div class="section-header">
+            <span class="section-badge">About Me</span>
+            <h2 class="section-title">Senior Cloud & Infrastructure Engineer</h2>
+            <p class="section-description">12+ years of experience designing, automating, and securing enterprise IT environments across KSA and Egypt. Specializing in Azure, VMware, Cisco, and Infrastructure as Code — delivering 99.9% uptime, 30% faster performance, and 20% lower costs.</p>
+          </div>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-card__icon">
+                <i class="fas fa-briefcase"></i>
+              </div>
+              <div class="stat-card__value">12+</div>
+              <div class="stat-card__label">Years Experience</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card__icon">
+                <i class="fas fa-server"></i>
+              </div>
+              <div class="stat-card__value">99.9%</div>
+              <div class="stat-card__label">Uptime</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card__icon">
+                <i class="fas fa-tachometer-alt"></i>
+              </div>
+              <div class="stat-card__value">30%</div>
+              <div class="stat-card__label">Faster Performance</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card__icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="stat-card__value">20%</div>
+              <div class="stat-card__label">Cost Reduction</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Roadmap Section -->
+      <section class="roadmap" id="roadmap" data-animate>
         <div class="section-header">
-          <span class="section-badge">Achievements</span>
-          <h2 class="section-title">Key Highlights</h2>
+          <span class="section-badge">Roadmap</span>
+          <h2 class="section-title">What's Next</h2>
         </div>
         <ul class="roadmap__timeline">
           <li>
-            <span class="roadmap__label">Enterprise Scale</span>
-            <p>Led infrastructure design for telecom, utilities, and financial sectors across KSA and Egypt—ensuring 99.9% uptime and zero data-loss in disaster recovery tests.</p>
+            <span class="roadmap__label">Q1 2025</span>
+            <p>Releasing Terraform modules for AWS multi-account architectures and landing zone automation.</p>
           </li>
           <li>
-            <span class="roadmap__label">Performance</span>
-            <p>Optimized critical infrastructures achieving 30% faster performance and 20% cost reduction through automation and cloud-native architectures.</p>
+            <span class="roadmap__label">Q2 2025</span>
+            <p>Publishing CI/CD templates for GitHub Actions, GitLab CI, and Jenkins with security scanning.</p>
           </li>
           <li>
-            <span class="roadmap__label">Collaboration</span>
-            <p>Successfully delivered large-scale IT projects with cross-functional and multi-national teams—bridging business needs with reliable cloud solutions.</p>
+            <span class="roadmap__label">Q3 2025</span>
+            <p>Launching Kubernetes platform blueprints with observability, service mesh, and GitOps workflows.</p>
           </li>
         </ul>
       </section>
@@ -523,7 +482,7 @@
           <a href="https://www.linkedin.com/in/engabelal/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
         <div class="footer__version">
-          <span>v2.1.0-beta</span>
+          <span>v1.8.0-beta</span>
         </div>
       </div>
     </footer>

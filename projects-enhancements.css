@@ -1,79 +1,84 @@
-/* Projects Filter Tabs */
+/* Make entire project card clickable */
+.project-card {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card .project-card__link {
+  pointer-events: none;
+}
+
+/* Project filter animations */
+.project-card.hidden {
+  display: none;
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.project-card.show {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
+  animation: fadeInScale 0.4s ease-out;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Filter buttons */
 .projects__filters {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
   justify-content: center;
-  flex-wrap: wrap;
   margin-bottom: 40px;
 }
 
 .filter-btn {
   padding: 10px 24px;
   border-radius: 999px;
-  border: 1.5px solid rgba(59, 130, 246, 0.2);
+  border: 2px solid rgba(59, 130, 246, 0.2);
   background: transparent;
   color: var(--text-muted);
-  font-size: 0.9rem;
   font-weight: 600;
+  font-size: 0.9rem;
   cursor: pointer;
   transition: all 300ms ease;
   font-family: inherit;
+  margin-bottom: 8px;
 }
 
 .filter-btn:hover {
   border-color: rgba(59, 130, 246, 0.4);
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(139, 92, 246, 0.08));
+  background: rgba(59, 130, 246, 0.05);
   color: var(--brand);
   transform: translateY(-2px);
 }
 
 .filter-btn.active {
-  background: linear-gradient(135deg, var(--brand), var(--secondary));
-  border-color: transparent;
+  background: linear-gradient(135deg, var(--brand), var(--brand-light));
+  border-color: var(--brand);
   color: #ffffff;
-  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
 
-
-
-/* Hide/Show Animation */
-.project-card {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+/* Make tech stack cards clickable */
+.skill-card {
+  cursor: pointer;
+  transition: all 300ms ease;
 }
 
-.project-card.hidden {
-  display: none !important;
-}
-
-.project-card.show {
-  display: block !important;
-  animation: projectFadeIn 0.5s ease-out;
-}
-
-@keyframes projectFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  .projects__filters {
-    gap: 8px;
-  }
-  
-  .filter-btn {
-    padding: 8px 18px;
-    font-size: 0.85rem;
-  }
-  
-
+.skill-card:active {
+  transform: translateY(-2px) scale(0.98);
 }
