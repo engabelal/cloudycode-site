@@ -3,21 +3,9 @@
   const body = document.body;
   const themeToggle = document.getElementById('theme-toggle');
   
-  function applyTheme() {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      html.setAttribute('data-theme', savedTheme);
-    } else {
-      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      html.setAttribute('data-theme', systemTheme);
-    }
-  }
-  
-  applyTheme();
-  
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
     if (!localStorage.getItem('theme')) {
-      applyTheme();
+      html.setAttribute('data-theme', e.matches ? 'dark' : 'light');
     }
   });
   
@@ -58,8 +46,8 @@
         loaderWrapper.style.display = "none";
         body.style.overflow = "";
         window.scrollTo(0, 0);
-      }, 800);
-    }, 1800);
+      }, 500);
+    }, 800);
   });
 
   // Make project cards clickable

@@ -430,8 +430,16 @@ body::before {
   -webkit-backface-visibility: hidden;
 }
 
-[data-theme="dark"] .brand__logo {
-  content: url('logo/Cloudycode-t-dark.png');
+.brand__logo--dark {
+  display: none;
+}
+
+[data-theme="dark"] .brand__logo--light {
+  display: none;
+}
+
+[data-theme="dark"] .brand__logo--dark {
+  display: block;
 }
 
 .header.scrolled .brand__logo {
