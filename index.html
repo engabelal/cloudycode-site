@@ -3,6 +3,14 @@
   <head>
     <script>
       (function() {
+        const currentVersion = 'v2.9-beta';
+        const savedVersion = localStorage.getItem('siteVersion');
+        
+        if (savedVersion !== currentVersion) {
+          localStorage.clear();
+          localStorage.setItem('siteVersion', currentVersion);
+        }
+        
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme) {
           document.documentElement.setAttribute('data-theme', savedTheme);
@@ -37,7 +45,7 @@
     
     <div class="scroll-progress"></div>
     
-    <div class="beta-badge-fixed">v2.8-BETA</div>
+    <div class="beta-badge-fixed">v2.9-BETA</div>
     
     <div class="nebula" aria-hidden="true">
       <span class="orb orb--one"></span>
@@ -581,7 +589,7 @@
           <a href="https://www.linkedin.com/in/engabelal/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
         <div class="footer__version">
-          <span>v2.8-beta</span>
+          <span>v2.9-beta</span>
         </div>
       </div>
     </footer>
