@@ -1,5 +1,34 @@
 (function () {
+  const html = document.documentElement;
   const body = document.body;
+  const themeToggle = document.getElementById('theme-toggle');
+  
+  function applyTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      html.setAttribute('data-theme', savedTheme);
+    } else {
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      html.setAttribute('data-theme', systemTheme);
+    }
+  }
+  
+  applyTheme();
+  
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+    if (!localStorage.getItem('theme')) {
+      applyTheme();
+    }
+  });
+  
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+  }
   const loaderWrapper = document.querySelector(".loader-wrapper");
   const typingCode = document.getElementById("typing-code");
   
