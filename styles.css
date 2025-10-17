@@ -383,22 +383,39 @@ body::before {
   position: fixed;
   top: 20px;
   right: 20px;
-  padding: 4px 10px;
-  border-radius: 4px;
-  background: #1e293b;
-  color: #ffffff;
-  font-size: 0.65rem;
+  padding: 6px 14px;
+  border-radius: 8px;
+  background: rgba(59, 130, 246, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  color: var(--brand);
+  font-size: 0.7rem;
   font-weight: 600;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.05em;
   font-family: 'Inter', sans-serif;
   z-index: 9998;
-  transition: all 200ms ease;
+  transition: all 300ms ease;
   animation: fadeInBadge 0.6s ease 0.5s backwards;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
 }
 
 .beta-badge-fixed:hover {
-  background: #334155;
-  transform: scale(1.05);
+  background: rgba(59, 130, 246, 0.15);
+  border-color: rgba(59, 130, 246, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.2);
+}
+
+[data-theme="dark"] .beta-badge-fixed {
+  background: rgba(96, 165, 250, 0.12);
+  border-color: rgba(96, 165, 250, 0.25);
+  color: #93c5fd;
+}
+
+[data-theme="dark"] .beta-badge-fixed:hover {
+  background: rgba(96, 165, 250, 0.18);
+  border-color: rgba(96, 165, 250, 0.35);
 }
 
 @keyframes fadeInBadge {
