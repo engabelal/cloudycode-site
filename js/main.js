@@ -3,14 +3,25 @@
   const body = document.body;
   const themeToggle = document.getElementById("theme-toggle");
 
-  
+  // Clear localStorage on every page load
+  localStorage.removeItem("theme");
+
+  // Detect system preference
+  const darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  const systemTheme = darkModeQuery.matches ? "dark" : "light";
+  html.setAttribute("data-theme", systemTheme);
+
+  // Listen for system theme changes
+  darkModeQuery.addEventListener("change", (e) => {
+    const newTheme = e.matches ? "dark" : "light";
+    html.setAttribute("data-theme", newTheme);
+  });
 
   if (themeToggle) {
     themeToggle.addEventListener("click", () => {
       const currentTheme = html.getAttribute("data-theme") || "light";
       const newTheme = currentTheme === "light" ? "dark" : "light";
       html.setAttribute("data-theme", newTheme);
-      localStorage.setItem("theme", newTheme);
     });
   }
   
@@ -28,8 +39,8 @@
         loaderWrapper.style.display = "none";
         body.style.overflow = "";
         window.scrollTo(0, 0);
-      }, 800);
-    }, 1500);
+      }, 500);
+    }, 500);
   });
 
   // Enhanced project cards with performance optimization
@@ -271,18 +282,18 @@
         if (currentCharIndex < currentWord.length) {
           typedWord.innerHTML = currentWord.substring(0, currentCharIndex + 1) || '&nbsp;';
           currentCharIndex++;
-          setTimeout(typeWriter, 80);
+          setTimeout(typeWriter, 50);
         } else {
           setTimeout(() => {
             isDeleting = true;
             typeWriter();
-          }, 2500);
+          }, 1800);
         }
       } else {
         if (currentCharIndex > 0) {
           typedWord.innerHTML = currentWord.substring(0, currentCharIndex - 1) || '&nbsp;';
           currentCharIndex--;
-          setTimeout(typeWriter, 40);
+          setTimeout(typeWriter, 30);
         } else {
           isDeleting = false;
           currentWordIndex = (currentWordIndex + 1) % words.length;

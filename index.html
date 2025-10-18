@@ -2,22 +2,9 @@
 <html lang="en">
   <head>
     <script>
-      (function () {
-        // Don't clear theme on version change
-        const savedTheme = localStorage.getItem("theme");
-        if (savedTheme) {
-          document.documentElement.setAttribute("data-theme", savedTheme);
-        } else if (
-          window.matchMedia &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches
-        ) {
-          document.documentElement.setAttribute("data-theme", "dark");
-          localStorage.setItem("theme", "dark");
-        } else {
-          document.documentElement.setAttribute("data-theme", "light");
-          localStorage.setItem("theme", "light");
-        }
-      })();
+      // Quick theme detection to prevent flash
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.setAttribute("data-theme", prefersDark ? "dark" : "light");
     </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -69,16 +56,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
-      as="style"
-    />
+    <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/skills-tabs.css" />
+    <link rel="stylesheet" href="css/stats-big.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -100,7 +84,7 @@
 
     <div class="scroll-progress"></div>
 
-    <div class="beta-badge-fixed">v4.3.3-BETA</div>
+    <div class="beta-badge-fixed">v4.4.0-BETA</div>
 
     <div class="nebula" aria-hidden="true">
       <span class="orb orb--one"></span>
@@ -115,11 +99,13 @@
             class="brand__logo brand__logo--light"
             src="logo/Cloudecode-t.png"
             alt="Cloudecode.dev logo"
+            loading="eager"
           />
           <img
             class="brand__logo brand__logo--dark"
             src="logo/Cloudycode-t-dark.png"
             alt="Cloudecode.dev logo"
+            loading="eager"
           />
         </a>
 
@@ -128,6 +114,7 @@
             class="theme-toggle"
             id="theme-toggle"
             aria-label="Toggle theme"
+            title="Override system theme (temporary)"
           >
             <svg
               class="theme-icon theme-icon--sun"
@@ -286,9 +273,11 @@
             </a>
             <a
               class="cta cta--secondary cta--large"
-              href="mailto:eng.abelal@gmail.com"
+              href="https://www.linkedin.com/in/engabelal/"
+              target="_blank"
+              rel="noopener"
             >
-              <span>Start a Conversation</span>
+              <span>Connect on LinkedIn</span>
             </a>
           </div>
         </div>
@@ -405,242 +394,30 @@
                   margin: 0 auto;
                 "
               >
-                Trusted across telecom, utilities, financial services, and
-                government programmes—architecting resilient infrastructure that
-                keeps nationwide operations always-on.
+                Built and managed critical infrastructure for telecom operators, utility companies, financial institutions, and government agencies—ensuring 99.9% uptime for nationwide operations.
               </p>
             </div>
           </div>
-          <div
-            style="
-              margin-top: 48px;
-              display: grid;
-              grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-              gap: 20px;
-              max-width: 1000px;
-              margin-left: auto;
-              margin-right: auto;
-            "
-          >
-            <div
-              style="
-                background: var(--bg-elevated);
-                border: 2px solid rgba(59, 130, 246, 0.12);
-                border-radius: 16px;
-                padding: 32px 24px;
-                text-align: center;
-                transition: all 0.3s ease;
-              "
-            >
-              <div
-                style="
-                  width: 56px;
-                  height: 56px;
-                  margin: 0 auto 16px;
-                  border-radius: 12px;
-                  background: linear-gradient(
-                    135deg,
-                    rgba(59, 130, 246, 0.15),
-                    rgba(99, 102, 241, 0.15)
-                  );
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                "
-              >
-                <i
-                  class="fas fa-briefcase"
-                  style="font-size: 24px; color: var(--brand)"
-                ></i>
-              </div>
-              <div
-                style="
-                  font-family: 'Space Grotesk', sans-serif;
-                  font-size: 2.2rem;
-                  font-weight: 800;
-                  color: var(--brand);
-                  margin-bottom: 8px;
-                  letter-spacing: -0.02em;
-                "
-              >
-                12+
-              </div>
-              <div
-                style="
-                  font-size: 0.9rem;
-                  font-weight: 600;
-                  color: var(--text-muted);
-                  text-transform: uppercase;
-                  letter-spacing: 0.05em;
-                "
-              >
-                Years Experience
-              </div>
+          <div class="stats-big-numbers">
+            <div class="stat-big">
+              <div class="stat-big__icon"><i class="fas fa-calendar-alt"></i></div>
+              <div class="stat-big__number">12+</div>
+              <div class="stat-big__label">Years Building<br>Infrastructure</div>
             </div>
-            <div
-              style="
-                background: var(--bg-elevated);
-                border: 2px solid rgba(59, 130, 246, 0.12);
-                border-radius: 16px;
-                padding: 32px 24px;
-                text-align: center;
-                transition: all 0.3s ease;
-              "
-            >
-              <div
-                style="
-                  width: 56px;
-                  height: 56px;
-                  margin: 0 auto 16px;
-                  border-radius: 12px;
-                  background: linear-gradient(
-                    135deg,
-                    rgba(59, 130, 246, 0.15),
-                    rgba(99, 102, 241, 0.15)
-                  );
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                "
-              >
-                <i
-                  class="fas fa-server"
-                  style="font-size: 24px; color: var(--brand)"
-                ></i>
-              </div>
-              <div
-                style="
-                  font-family: 'Space Grotesk', sans-serif;
-                  font-size: 2.2rem;
-                  font-weight: 800;
-                  color: var(--brand);
-                  margin-bottom: 8px;
-                  letter-spacing: -0.02em;
-                "
-              >
-                99.9%
-              </div>
-              <div
-                style="
-                  font-size: 0.9rem;
-                  font-weight: 600;
-                  color: var(--text-muted);
-                  text-transform: uppercase;
-                  letter-spacing: 0.05em;
-                "
-              >
-                System Uptime
-              </div>
+            <div class="stat-big">
+              <div class="stat-big__icon"><i class="fas fa-shield-alt"></i></div>
+              <div class="stat-big__number">99.9%</div>
+              <div class="stat-big__label">System Uptime<br>Guaranteed</div>
             </div>
-            <div
-              style="
-                background: var(--bg-elevated);
-                border: 2px solid rgba(59, 130, 246, 0.12);
-                border-radius: 16px;
-                padding: 32px 24px;
-                text-align: center;
-                transition: all 0.3s ease;
-              "
-            >
-              <div
-                style="
-                  width: 56px;
-                  height: 56px;
-                  margin: 0 auto 16px;
-                  border-radius: 12px;
-                  background: linear-gradient(
-                    135deg,
-                    rgba(59, 130, 246, 0.15),
-                    rgba(99, 102, 241, 0.15)
-                  );
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                "
-              >
-                <i
-                  class="fas fa-tachometer-alt"
-                  style="font-size: 24px; color: var(--brand)"
-                ></i>
-              </div>
-              <div
-                style="
-                  font-family: 'Space Grotesk', sans-serif;
-                  font-size: 2.2rem;
-                  font-weight: 800;
-                  color: var(--brand);
-                  margin-bottom: 8px;
-                  letter-spacing: -0.02em;
-                "
-              >
-                +30%
-              </div>
-              <div
-                style="
-                  font-size: 0.9rem;
-                  font-weight: 600;
-                  color: var(--text-muted);
-                  text-transform: uppercase;
-                  letter-spacing: 0.05em;
-                "
-              >
-                Performance Boost
-              </div>
+            <div class="stat-big">
+              <div class="stat-big__icon"><i class="fas fa-rocket"></i></div>
+              <div class="stat-big__number">+30%</div>
+              <div class="stat-big__label">Performance<br>Improvement</div>
             </div>
-            <div
-              style="
-                background: var(--bg-elevated);
-                border: 2px solid rgba(59, 130, 246, 0.12);
-                border-radius: 16px;
-                padding: 32px 24px;
-                text-align: center;
-                transition: all 0.3s ease;
-              "
-            >
-              <div
-                style="
-                  width: 56px;
-                  height: 56px;
-                  margin: 0 auto 16px;
-                  border-radius: 12px;
-                  background: linear-gradient(
-                    135deg,
-                    rgba(59, 130, 246, 0.15),
-                    rgba(99, 102, 241, 0.15)
-                  );
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                "
-              >
-                <i
-                  class="fas fa-chart-line"
-                  style="font-size: 24px; color: var(--brand)"
-                ></i>
-              </div>
-              <div
-                style="
-                  font-family: 'Space Grotesk', sans-serif;
-                  font-size: 2.2rem;
-                  font-weight: 800;
-                  color: var(--brand);
-                  margin-bottom: 8px;
-                  letter-spacing: -0.02em;
-                "
-              >
-                -20%
-              </div>
-              <div
-                style="
-                  font-size: 0.9rem;
-                  font-weight: 600;
-                  color: var(--text-muted);
-                  text-transform: uppercase;
-                  letter-spacing: 0.05em;
-                "
-              >
-                Cost Savings
-              </div>
+            <div class="stat-big">
+              <div class="stat-big__icon"><i class="fas fa-piggy-bank"></i></div>
+              <div class="stat-big__number">-20%</div>
+              <div class="stat-big__label">Cost Reduction<br>Achieved</div>
             </div>
           </div>
         </div>
@@ -1161,7 +938,7 @@
           >
         </div>
         <div class="footer__version">
-          <span>v4.3.3-beta</span>
+          <span>v4.4.0-beta</span>
         </div>
       </div>
     </footer>
