@@ -38,7 +38,7 @@
 .cloud {
   width: 100px;
   height: 40px;
-  background: #60a5fa;
+  background: #54B9EE;
   border-radius: 50px;
   position: absolute;
   top: 20px;
@@ -47,20 +47,20 @@
 }
 
 [data-theme="dark"] .cloud {
-  background: #818cf8;
+  background: #a87dbd;
 }
 
 .cloud::before,
 .cloud::after {
   content: '';
   position: absolute;
-  background: #60a5fa;
+  background: #54B9EE;
   border-radius: 50%;
 }
 
 [data-theme="dark"] .cloud::before,
 [data-theme="dark"] .cloud::after {
-  background: #818cf8;
+  background: #a87dbd;
 }
 
 .cloud::before {
@@ -81,13 +81,13 @@
   position: absolute;
   width: 2px;
   height: 15px;
-  background: #3b82f6;
+  background: #54B9EE;
   bottom: 0;
   animation: rainFall 1s linear infinite;
 }
 
 [data-theme="dark"] .rain {
-  background: #60a5fa;
+  background: #54B9EE;
 }
 
 .rain:nth-child(2) { left: 40px; animation-delay: 0.2s; }
@@ -2896,7 +2896,7 @@ body::before {
 }
 
 [data-theme="dark"] #hero-status-symbol {
-  color: #818cf8;
+  color: #a87dbd;
 }
 
 #hero-status-text {
@@ -3064,7 +3064,7 @@ body::before {
   
   .heading-wrap h1:first-child::after {
     content: '›';
-    color: #818cf8;
+    color: #a87dbd;
 <<<<<<< HEAD
     font-size: 1em;
 =======
