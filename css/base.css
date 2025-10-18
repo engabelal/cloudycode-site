@@ -110,7 +110,7 @@
 
 /* CSS Variables */
 /* Logo Colors Reference:
-   Purple: #863c9e (Primary brand color)
+   Purple: #601a78 (Primary brand color - deep purple)
    Light Blue: #4cbaee (Accent & highlights)
    Dark Blue: #3553a9 (Used in gradients only - too dark for UI)
    Purple-Blue: #4943a3 (Secondary accent)
@@ -128,19 +128,19 @@
   --accent: #4cbaee;
   --accent-soft: rgba(76, 186, 238, 0.12);
   --accent-glow: rgba(76, 186, 238, 0.25);
-  --brand: #863c9e;
-  --brand-light: #b070d0;
-  --brand-dark: #6a2d80;
-  --brand-gradient: linear-gradient(135deg, #863c9e 0%, #5d4db8 40%, #4cbaee 100%);
+  --brand: #601a78;
+  --brand-light: #8b4aa8;
+  --brand-dark: #4a1560;
+  --brand-gradient: linear-gradient(135deg, #601a78 0%, #4943a3 40%, #4cbaee 100%);
   --secondary: #4943a3;
   --secondary-light: #6b68c4;
   --success: #10b981;
   --warning: #f59e0b;
-  --border: rgba(134, 60, 158, 0.18);
-  --border-glass: rgba(134, 60, 158, 0.22);
-  --shadow-primary: 0 10px 40px -15px rgba(134, 60, 158, 0.45);
-  --shadow-soft: 0 4px 20px -8px rgba(134, 60, 158, 0.12);
-  --shadow-glass: 0 8px 32px rgba(134, 60, 158, 0.15);
+  --border: rgba(96, 26, 120, 0.18);
+  --border-glass: rgba(96, 26, 120, 0.22);
+  --shadow-primary: 0 10px 40px -15px rgba(96, 26, 120, 0.45);
+  --shadow-soft: 0 4px 20px -8px rgba(96, 26, 120, 0.12);
+  --shadow-glass: 0 8px 32px rgba(96, 26, 120, 0.15);
   --shadow-glow: 0 0 24px rgba(76, 186, 238, 0.3);
   --radius-lg: 16px;
   --radius-md: 12px;
@@ -162,9 +162,9 @@
   --accent: #6dd5ff;
   --accent-soft: rgba(109, 213, 255, 0.12);
   --accent-glow: rgba(109, 213, 255, 0.3);
-  --brand: #d090ff;
-  --brand-light: #e5b8ff;
-  --brand-dark: #b070d0;
+  --brand: #b070d0;
+  --brand-light: #d4a5f0;
+  --brand-dark: #8b4aa8;
   --brand-gradient: linear-gradient(135deg, #c084e0 0%, #8b7fd8 40%, #6dd5ff 100%);
   --secondary: #8b7fd8;
   --secondary-light: #a89ee8;
