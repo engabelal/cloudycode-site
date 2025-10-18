@@ -69,15 +69,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link
       rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
       as="style"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/skills-tabs.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -99,7 +100,7 @@
 
     <div class="scroll-progress"></div>
 
-    <div class="beta-badge-fixed">v4.3.1-BETA</div>
+    <div class="beta-badge-fixed">v4.3.3-BETA</div>
 
     <div class="nebula" aria-hidden="true">
       <span class="orb orb--one"></span>
@@ -253,8 +254,7 @@
           </div>
 
           <p class="hero-description">
-            Building scalable cloud infrastructure. Automating deployments.
-            Making DevOps simple.
+            Ship faster • Scale effortlessly • Automate everything
           </p>
 
           <div class="hero-badges">
@@ -302,7 +302,7 @@
             <h2 class="section-title">Ahmed Belal</h2>
             <h3
               style="
-                font-family: 'Sora', sans-serif;
+                font-family: 'Space Grotesk', sans-serif;
                 font-size: 1.5rem;
                 font-weight: 600;
                 color: var(--brand);
@@ -345,60 +345,38 @@
                 "
               >
                 <strong style="color: var(--brand); font-weight: 700"
-                  >From on-prem to cloud</strong
-                >—my journey started managing traditional data centers and
-                enterprise infrastructure. I discovered my passion for
+                  >From managing enterprise data centers to building cloud platforms</strong
+                >—my journey has always been driven by a passion for automation. I constantly built
                 <strong style="color: var(--brand); font-weight: 700"
-                  >automation and scripting</strong
-                >, constantly building tools to solve problems. That led me to
+                  >scripts and tools to eliminate manual work</strong
+                > and solve real problems. That's when I found
                 <strong style="color: var(--accent); font-weight: 700"
                   >Cloud & DevOps</strong
-                >—where I now build automated, scalable systems that just work.
+                >—where infrastructure meets code, and where I now build automated, scalable systems that just work.
               </p>
             </div>
 
-            <div
-              style="
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-                gap: 24px;
-                margin-bottom: 40px;
-              "
-            >
-              <div class="about-skill-card">
-                <div class="about-skill-header">
-                  <div class="about-skill-icon">
-                    <i class="fas fa-cloud"></i>
-                  </div>
-                  <h4>Cloud & DevOps Engineering</h4>
-                </div>
-                <div class="about-skill-tags">
-                  <span>Azure</span>
-                  <span>AWS</span>
-                  <span>Oracle Cloud (OCI)</span>
-                  <span>Terraform</span>
-                  <span>GitOps</span>
-                  <span>GitHub Actions</span>
-                  <span>Jenkins</span>
-                  <span>Ansible</span>
+            <div class="skills-tabs-container">
+              <div class="skills-tabs">
+                <button class="skills-tab active" data-tab="cloud">
+                  <i class="fas fa-cloud"></i>
+                  <span>Cloud & DevOps</span>
+                </button>
+                <button class="skills-tab" data-tab="platform">
+                  <i class="fas fa-server"></i>
+                  <span>Infrastructure & Platform</span>
+                </button>
+              </div>
+              
+              <div class="skills-tab-content active" id="cloud-tab">
+                <div class="skills-list">
+                  Azure • AWS • Oracle Cloud (OCI) • Terraform • GitOps • GitHub Actions • Jenkins • Ansible • Prometheus/Grafana • ArgoCD • Helm • ELK Stack
                 </div>
               </div>
-
-              <div class="about-skill-card">
-                <div class="about-skill-header">
-                  <div class="about-skill-icon about-skill-icon--secondary">
-                    <i class="fas fa-server"></i>
-                  </div>
-                  <h4>Infrastructure & Platform Ops</h4>
-                </div>
-                <div class="about-skill-tags">
-                  <span>VMware vSphere</span>
-                  <span>Cisco Networking</span>
-                  <span>Linux</span>
-                  <span>Windows Server</span>
-                  <span>High Availability</span>
-                  <span>Data Center Design</span>
-                  <span>Disaster Recovery</span>
+              
+              <div class="skills-tab-content" id="platform-tab">
+                <div class="skills-list">
+                  VMware vSphere • Cisco Networking • Linux • Windows Server • Storage (SAN/NAS) • Backup (Veeam) • Load Balancing (F5) • High Availability • Disaster Recovery
                 </div>
               </div>
             </div>
@@ -477,7 +455,7 @@
               </div>
               <div
                 style="
-                  font-family: 'Sora', sans-serif;
+                  font-family: 'Space Grotesk', sans-serif;
                   font-size: 2.2rem;
                   font-weight: 800;
                   color: var(--brand);
@@ -532,7 +510,7 @@
               </div>
               <div
                 style="
-                  font-family: 'Sora', sans-serif;
+                  font-family: 'Space Grotesk', sans-serif;
                   font-size: 2.2rem;
                   font-weight: 800;
                   color: var(--brand);
@@ -587,7 +565,7 @@
               </div>
               <div
                 style="
-                  font-family: 'Sora', sans-serif;
+                  font-family: 'Space Grotesk', sans-serif;
                   font-size: 2.2rem;
                   font-weight: 800;
                   color: var(--brand);
@@ -642,7 +620,7 @@
               </div>
               <div
                 style="
-                  font-family: 'Sora', sans-serif;
+                  font-family: 'Space Grotesk', sans-serif;
                   font-size: 2.2rem;
                   font-weight: 800;
                   color: var(--brand);
@@ -1183,7 +1161,7 @@
           >
         </div>
         <div class="footer__version">
-          <span>v4.3.1-beta</span>
+          <span>v4.3.3-beta</span>
         </div>
       </div>
     </footer>
@@ -1202,6 +1180,25 @@
     </button>
 
     <script src="js/main.js" defer></script>
+    <script>
+      // Skills Tabs
+      document.addEventListener('DOMContentLoaded', () => {
+        const tabs = document.querySelectorAll('.skills-tab');
+        const contents = document.querySelectorAll('.skills-tab-content');
+        
+        tabs.forEach(tab => {
+          tab.addEventListener('click', () => {
+            const target = tab.dataset.tab;
+            
+            tabs.forEach(t => t.classList.remove('active'));
+            contents.forEach(c => c.classList.remove('active'));
+            
+            tab.classList.add('active');
+            document.getElementById(`${target}-tab`).classList.add('active');
+          });
+        });
+      });
+    </script>
 
     <!-- Structured Data -->
     <script type="application/ld+json">
