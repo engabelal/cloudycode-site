@@ -1,0 +1,79 @@
+/* Big Numbers Stats - Stripe Style */
+.stats-big-numbers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 48px;
+  max-width: 1100px;
+  margin: 48px auto 0;
+  padding: 0 20px;
+}
+
+.stat-big {
+  text-align: center;
+}
+
+.stat-big__icon {
+  font-size: 2rem;
+  color: var(--brand);
+  margin-bottom: 16px;
+  opacity: 0.8;
+}
+
+[data-theme="dark"] .stat-big__icon {
+  color: var(--brand-light);
+}
+
+.stat-big__number {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 5rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 16px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.stat-big__label {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+}
+
+[data-theme="dark"] .stat-big__number {
+  background: linear-gradient(135deg, #818cf8 0%, #60a5fa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@media (max-width: 768px) {
+  .stats-big-numbers {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    margin-top: 32px;
+  }
+  
+  .stat-big__number {
+    font-size: 3rem;
+  }
+  
+  .stat-big__label {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-big-numbers {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .stat-big__number {
+    font-size: 3.5rem;
+  }
+}
