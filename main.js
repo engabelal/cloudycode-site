@@ -109,7 +109,7 @@
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1, rootMargin: '50px' }
     );
 
     document.querySelectorAll("[data-animate]").forEach((section) => {

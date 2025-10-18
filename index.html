@@ -3,7 +3,7 @@
   <head>
     <script>
       (function() {
-        const currentVersion = 'v3.2-beta';
+        const currentVersion = 'v3.6-beta';
         const savedVersion = localStorage.getItem('siteVersion');
         
         if (savedVersion !== currentVersion) {
@@ -23,11 +23,31 @@
     </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Ship Faster. Scale Smarter. Production-ready cloud automation, CI/CD pipelines, and infrastructure as code solutions." />
+    <meta name="description" content="Ship Faster. Scale Smarter. Production-ready cloud automation, CI/CD pipelines, and infrastructure as code solutions by Ahmed Belal - Senior Cloud & DevOps Engineer." />
+    <meta name="keywords" content="DevOps, Cloud Engineer, AWS, Azure, Terraform, Ansible, Docker, Kubernetes, CI/CD, Infrastructure as Code, Ahmed Belal" />
+    <meta name="author" content="Ahmed Belal" />
+    <meta name="theme-color" content="#2563eb" />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://cloudycode.dev/" />
+    <meta property="og:title" content="Cloudycode.dev | Cloud Automation Factory" />
+    <meta property="og:description" content="Ship Faster. Scale Smarter. Production-ready cloud automation, CI/CD pipelines, and infrastructure as code solutions." />
+    <meta property="og:image" content="https://cloudycode.dev/logo/Cloudecode-t.png" />
+    <meta property="og:site_name" content="Cloudycode.dev" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://cloudycode.dev/" />
+    <meta name="twitter:title" content="Cloudycode.dev | Cloud Automation Factory" />
+    <meta name="twitter:description" content="Ship Faster. Scale Smarter. Production-ready cloud automation and DevOps solutions." />
+    <meta name="twitter:image" content="https://cloudycode.dev/logo/Cloudecode-t.png" />
+    
     <title>Cloudycode.dev | Cloud Automation Factory</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" as="style" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="projects-enhancements.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
@@ -44,7 +64,7 @@
     
     <div class="scroll-progress"></div>
     
-    <div class="beta-badge-fixed">v3.2-BETA</div>
+    <div class="beta-badge-fixed">v3.6-BETA</div>
     
     <div class="nebula" aria-hidden="true">
       <span class="orb orb--one"></span>
@@ -588,7 +608,7 @@
           <a href="https://www.linkedin.com/in/engabelal/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
         <div class="footer__version">
-          <span>v3.2-beta</span>
+          <span>v3.6-beta</span>
         </div>
       </div>
     </footer>
@@ -600,5 +620,23 @@
     </button>
 
     <script src="main.js" defer></script>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ahmed Belal",
+      "jobTitle": "Senior Cloud & Infrastructure Engineer",
+      "url": "https://cloudycode.dev",
+      "sameAs": [
+        "https://github.com/engabelal",
+        "https://www.linkedin.com/in/engabelal/",
+        "https://blog.cloudycode.dev"
+      ],
+      "knowsAbout": ["AWS", "Azure", "Terraform", "Ansible", "Docker", "Kubernetes", "CI/CD", "DevOps"],
+      "email": "eng.abelal@gmail.com"
+    }
+    </script>
   </body>
 </html>
