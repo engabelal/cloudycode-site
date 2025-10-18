@@ -160,7 +160,7 @@ body {
 }
 
 [data-theme="dark"] .header.scrolled {
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(15, 23, 42, 0.75);
   border-bottom: 1px solid rgba(148, 163, 184, 0.2);
 }
 
@@ -312,7 +312,9 @@ body::before {
 
 .header {
   padding: 32px 0 24px;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -327,16 +329,22 @@ body::before {
   -webkit-backface-visibility: hidden;
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
+  border-bottom: 1px solid rgba(59, 130, 246, 0.1);
 }
 
 .header.scrolled {
   padding: 12px 0;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 4px 20px rgba(59, 130, 246, 0.12);
   border-bottom: 1px solid var(--border);
   animation: slideDown 0.4s ease-out;
+}
+
+[data-theme="dark"] .header {
+  background: rgba(15, 23, 42, 0.5);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
 }
 
 @keyframes slideDown {
@@ -574,7 +582,7 @@ body::before {
   }
   
   .header {
-    padding: 18px 0;
+    padding: 8px 0;
     position: -webkit-sticky !important;
     position: sticky !important;
     top: 0 !important;
@@ -585,7 +593,7 @@ body::before {
   }
   
   .header.scrolled {
-    padding: 12px 0;
+    padding: 8px 0;
     position: -webkit-sticky !important;
     position: sticky !important;
     top: 0 !important;
@@ -596,37 +604,34 @@ body::before {
   }
   
   .header__container {
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 16px;
+    gap: 0;
   }
   
   .header.scrolled .header__container {
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
     gap: 0;
   }
   
   .brand {
     order: 0;
+    position: static !important;
+    transform: none !important;
+    margin: 0;
   }
   
   .header.scrolled .brand {
-    position: static;
-    transform: none;
+    position: static !important;
+    transform: none !important;
+    margin: 0;
   }
   
   .header__actions {
-    display: flex;
-    order: 1;
-  }
-  
-  .header.scrolled .header__actions {
-    opacity: 0;
-    visibility: hidden;
-    transform: scale(0.8) translateY(-10px);
-    pointer-events: none;
+    display: none;
   }
   
   .header__actions .cta--primary {
@@ -634,13 +639,13 @@ body::before {
   }
   
   .brand__logo {
-    width: 450px;
-    height: 90px;
+    width: 340px;
+    height: 68px;
   }
   
   .header.scrolled .brand__logo {
-    width: 350px;
-    height: 70px;
+    width: 300px;
+    height: 60px;
   }
 }
 
