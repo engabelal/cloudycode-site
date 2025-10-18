@@ -3,7 +3,7 @@
   <head>
     <script>
       (function() {
-        const currentVersion = 'v4.1-beta';
+        const currentVersion = 'v4.2-beta';
         const savedVersion = localStorage.getItem('siteVersion');
         
         if (savedVersion !== currentVersion) {
@@ -49,6 +49,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" as="style" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="hero.css" />
     <link rel="stylesheet" href="projects-enhancements.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   </head>
@@ -64,7 +65,7 @@
     
     <div class="scroll-progress"></div>
     
-    <div class="beta-badge-fixed">v4.1-BETA</div>
+    <div class="beta-badge-fixed">v4.2-BETA</div>
     
     <div class="nebula" aria-hidden="true">
       <span class="orb orb--one"></span>
@@ -122,54 +123,42 @@
     <main class="main">
       <!-- Hero Section -->
       <section class="hero" data-animate>
-        <div class="hero__content">
-          <div class="hero__left">
-            <h1 class="hero__title">
-              Ship <span class="hero__title-emphasis">FASTER</span><br>
-              Scale <span class="hero__title-emphasis">SMARTER</span>
-            </h1>
-            
-            <div class="hero__divider"></div>
-            
-            <p class="hero__subtitle">
-              Automate your infrastructure. Deploy with confidence. Scale without limits.
-            </p>
-            
-            <div class="hero__actions">
-              <a class="cta cta--primary cta--large" href="#projects">
-                <span>View Projects</span>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                  <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </a>
-              <a class="cta cta--secondary" href="mailto:eng.abelal@gmail.com">
-                <span>Contact Me</span>
-              </a>
+        <div class="hero-container">
+          <div class="status-wrap">
+            <span id="hero-status-symbol">◐</span>
+            <span id="hero-status-text">Thinking...</span>
+          </div>
+
+          <div class="heading-wrap">
+            <h1>Turning</h1>
+            <div class="hero-caret">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+                <path d="M19.2617 9.77173C19.9088 9.07558 20.9191 8.91467 21.7314 9.31665L21.8906 9.40356L21.9355 9.43481L22.1914 9.6311C22.2037 9.64058 22.2161 9.6508 22.2275 9.66138L44.627 30.4622C45.0537 30.8586 45.2997 31.4154 45.2998 32.0002C45.2998 32.4378 45.1632 32.862 44.9141 33.2141C44.9036 33.2289 44.8919 33.2435 44.8799 33.2571L44.6611 33.5032C44.6504 33.5153 44.6388 33.5273 44.627 33.5383L22.2275 54.3381C21.3775 55.127 20.0506 55.0769 19.2617 54.2278H19.2607C18.4721 53.3777 18.5226 52.0508 19.3721 51.262L40.1182 32.0002L19.3721 12.7385C19.3602 12.7275 19.3487 12.7155 19.3379 12.7034L19.1221 12.4592C19.1105 12.4462 19.0999 12.4324 19.0898 12.4182C18.5226 11.6235 18.5712 10.5162 19.2607 9.77271L19.2617 9.77173Z" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
             </div>
+            <h1 id="hero-typed-word">&nbsp;</h1>
+          </div>
+
+          <p class="hero-description">Automate your infrastructure. Deploy with confidence. Scale without limits.</p>
+
+          <div class="hero-badges">
+            <span class="hero-badge"><i class="fab fa-aws"></i> AWS</span>
+            <span class="hero-badge"><i class="fab fa-microsoft"></i> Azure</span>
+            <span class="hero-badge"><i class="fas fa-code"></i> Terraform</span>
+            <span class="hero-badge"><i class="fab fa-docker"></i> Docker</span>
+            <span class="hero-badge"><i class="fas fa-dharmachakra"></i> Kubernetes</span>
           </div>
           
-          <div class="hero__right">
-            <div class="hero__visual" id="hero-terminal">
-              <div class="hero__visual-header">
-                <div class="hero__visual-dots">
-                  <span></span><span></span><span></span>
-                </div>
-                <div class="hero__visual-title">zsh</div>
-              </div>
-              <div class="hero__visual-body" id="terminal-body">
-                <div class="terminal-prompt-line">
-                  <span class="term-prompt">~/deploy</span>
-                  <span class="term-git">git:(main)</span>
-                  <span class="term-env">aws:prod</span>
-                </div>
-                <div class="terminal-command-line">
-                  <span class="term-arrow">❯</span>
-                  <span class="terminal-command" id="terminal-cmd"></span>
-                  <span class="terminal-cursor" id="cursor">_</span>
-                </div>
-                <div class="terminal-output" id="terminal-output" style="display: none;"></div>
-              </div>
-            </div>
+          <div class="hero-actions">
+            <a class="cta cta--primary cta--large" href="#projects">
+              <span>View Projects</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a class="cta cta--secondary cta--large" href="mailto:eng.abelal@gmail.com">
+              <span>Contact Me</span>
+            </a>
           </div>
         </div>
       </section>
@@ -608,7 +597,7 @@
           <a href="https://www.linkedin.com/in/engabelal/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
         <div class="footer__version">
-          <span>v4.1-beta</span>
+          <span>v4.2-beta</span>
         </div>
       </div>
     </footer>
@@ -620,6 +609,7 @@
     </button>
 
     <script src="main.js" defer></script>
+    <script src="hero-animation.js" defer></script>
     
     <!-- Structured Data -->
     <script type="application/ld+json">

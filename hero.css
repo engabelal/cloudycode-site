@@ -1,0 +1,240 @@
+/* Hero Section - Centered Typing Animation */
+.hero {
+  text-align: center;
+  padding: clamp(4rem, 10vh, 8rem) 0;
+}
+
+.hero-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.status-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: transparent;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.875rem;
+  margin-bottom: 48px;
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .status-wrap {
+  border-color: rgba(96, 165, 250, 0.4);
+}
+
+#hero-status-symbol {
+  font-size: 1rem;
+  color: #3b82f6;
+}
+
+[data-theme="dark"] #hero-status-symbol {
+  color: #60a5fa;
+}
+
+#hero-status-text {
+  color: var(--text-primary);
+}
+
+.heading-wrap {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 24px;
+}
+
+.heading-wrap h1 {
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--text-strong);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.hero-caret {
+  color: #3b82f6;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  animation: heroCaretBlink 1.5s ease-in-out infinite;
+  display: flex;
+  align-items: center;
+}
+
+.hero-caret svg {
+  width: 1em;
+  height: 1em;
+}
+
+#hero-typed-word {
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0;
+  background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  white-space: nowrap;
+}
+
+.hero-description {
+  color: var(--text-muted);
+  font-size: 1.15rem;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 3rem auto 2rem;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.hero-badge i {
+  color: #3b82f6;
+  font-size: 1.1rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.hero-actions .cta--secondary {
+  background: rgba(59, 130, 246, 0.1);
+  border: 2px solid rgba(59, 130, 246, 0.3);
+  color: var(--brand);
+}
+
+.hero-actions .cta--secondary:hover {
+  background: rgba(59, 130, 246, 0.15);
+  border-color: rgba(59, 130, 246, 0.5);
+  transform: translateY(-2px);
+}
+
+[data-theme="dark"] .hero-actions .cta--secondary {
+  color: #93c5fd;
+  border-color: rgba(96, 165, 250, 0.4);
+}
+
+[data-theme="dark"] .hero-actions .cta--secondary:hover {
+  background: rgba(96, 165, 250, 0.2);
+  border-color: rgba(96, 165, 250, 0.6);
+}
+
+@keyframes heroCaretBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+@media (max-width: 768px) {
+  .heading-wrap {
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
+    justify-content: center;
+  }
+  
+  .hero {
+    padding: clamp(3rem, 8vh, 6rem) 0;
+  }
+  
+  .status-wrap {
+    font-size: 0.8rem;
+    padding: 8px 18px;
+    margin-bottom: 36px;
+  }
+  
+  .hero-description {
+    font-size: 1.05rem;
+    margin: 2.5rem auto 2rem;
+    padding: 0 20px;
+  }
+  
+  .hero-badges {
+    gap: 10px;
+    margin-bottom: 2rem;
+    padding: 0 10px;
+  }
+  
+  .hero-badge {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+  
+  .hero-actions {
+    padding: 0 20px;
+    width: 100%;
+  }
+  
+  .hero-actions .cta {
+    flex: 1;
+    min-width: 140px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-container {
+    padding: 0 16px;
+  }
+  
+  .heading-wrap {
+    gap: 0.4rem !important;
+  }
+  
+  .heading-wrap h1 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+  
+  .hero-caret {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+  
+  #hero-typed-word {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+  
+  .hero-badge {
+    padding: 7px 12px;
+    font-size: 0.8rem;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    padding: 0 16px;
+  }
+  
+  .hero-actions .cta {
+    width: 100%;
+  }
+}
