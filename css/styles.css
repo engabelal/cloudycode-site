@@ -3122,9 +3122,30 @@ body::before {
 
 @media (max-width: 768px) {
   .heading-wrap {
-    flex-wrap: wrap !important;
-    gap: 0.5rem !important;
+    flex-direction: column !important;
+    gap: 0.75rem !important;
     justify-content: center;
+    align-items: center !important;
+  }
+  
+  .heading-wrap h1:first-child {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .heading-wrap h1:first-child::after {
+    content: '›';
+    color: #818cf8;
+    font-size: 1em;
+  }
+  
+  .heading-wrap .hero-caret {
+    display: none !important;
+  }
+  
+  .heading-wrap #hero-typed-word {
+    text-align: center;
   }
 
   .hero {
