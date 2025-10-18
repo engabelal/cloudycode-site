@@ -109,33 +109,39 @@
 }
 
 /* CSS Variables */
+/* Logo Colors Reference:
+   Purple: #863c9e (Primary brand color)
+   Light Blue: #4cbaee (Accent & highlights)
+   Dark Blue: #3553a9 (Used in gradients only - too dark for UI)
+   Purple-Blue: #4943a3 (Secondary accent)
+*/
 :root {
   color-scheme: light;
   --bg-primary: #ffffff;
-  --bg-elevated: #ffffff;
-  --bg-highlight: #f8fafc;
+  --bg-elevated: #fafbfc;
+  --bg-highlight: #f5f7fa;
   --bg-glass: rgba(255, 255, 255, 0.95);
   --bg-glass-elevated: rgba(255, 255, 255, 0.98);
-  --text-primary: #0f172a;
-  --text-strong: #020617;
-  --text-muted: #475569;
-  --accent: #368dd0;
-  --accent-soft: rgba(54, 141, 208, 0.1);
-  --accent-glow: rgba(54, 141, 208, 0.3);
-  --brand: #7f38a0;
-  --brand-light: #a882c2;
-  --brand-dark: #6c39a1;
-  --brand-gradient: linear-gradient(135deg, #7f38a0 0%, #368dd0 100%);
-  --secondary: #2b30a1;
-  --secondary-light: #49b7ec;
+  --text-primary: #1a1a2e;
+  --text-strong: #0f0f1e;
+  --text-muted: #64748b;
+  --accent: #4cbaee;
+  --accent-soft: rgba(76, 186, 238, 0.12);
+  --accent-glow: rgba(76, 186, 238, 0.25);
+  --brand: #863c9e;
+  --brand-light: #b070d0;
+  --brand-dark: #6a2d80;
+  --brand-gradient: linear-gradient(135deg, #863c9e 0%, #5d4db8 40%, #4cbaee 100%);
+  --secondary: #4943a3;
+  --secondary-light: #6b68c4;
   --success: #10b981;
   --warning: #f59e0b;
-  --border: rgba(148, 163, 184, 0.2);
-  --border-glass: rgba(127, 56, 160, 0.2);
-  --shadow-primary: 0 10px 40px -15px rgba(127, 56, 160, 0.3);
-  --shadow-soft: 0 4px 20px -8px rgba(0, 0, 0, 0.08);
-  --shadow-glass: 0 8px 32px rgba(127, 56, 160, 0.12);
-  --shadow-glow: 0 0 24px rgba(54, 141, 208, 0.25);
+  --border: rgba(134, 60, 158, 0.18);
+  --border-glass: rgba(134, 60, 158, 0.22);
+  --shadow-primary: 0 10px 40px -15px rgba(134, 60, 158, 0.45);
+  --shadow-soft: 0 4px 20px -8px rgba(134, 60, 158, 0.12);
+  --shadow-glass: 0 8px 32px rgba(134, 60, 158, 0.15);
+  --shadow-glow: 0 0 24px rgba(76, 186, 238, 0.3);
   --radius-lg: 16px;
   --radius-md: 12px;
   --radius-sm: 8px;
@@ -145,31 +151,31 @@
 
 [data-theme="dark"] {
   color-scheme: dark;
-  --bg-primary: #0f172a;
-  --bg-elevated: #1e293b;
-  --bg-highlight: #334155;
-  --bg-glass: rgba(30, 41, 59, 0.95);
-  --bg-glass-elevated: rgba(30, 41, 59, 0.98);
-  --text-primary: #f1f5f9;
-  --text-strong: #ffffff;
+  --bg-primary: #0a0e1a;
+  --bg-elevated: #151b2e;
+  --bg-highlight: #1f2937;
+  --bg-glass: rgba(21, 27, 46, 0.95);
+  --bg-glass-elevated: rgba(21, 27, 46, 0.98);
+  --text-primary: #e2e8f0;
+  --text-strong: #f8fafc;
   --text-muted: #94a3b8;
-  --accent: #49b7ec;
-  --accent-soft: rgba(73, 183, 236, 0.15);
-  --accent-glow: rgba(73, 183, 236, 0.3);
-  --brand: #a882c2;
-  --brand-light: #c4a5d8;
-  --brand-dark: #7f38a0;
-  --brand-gradient: linear-gradient(135deg, #a882c2 0%, #49b7ec 100%);
-  --secondary: #368dd0;
-  --secondary-light: #9ecde6;
+  --accent: #6dd5ff;
+  --accent-soft: rgba(109, 213, 255, 0.12);
+  --accent-glow: rgba(109, 213, 255, 0.3);
+  --brand: #d090ff;
+  --brand-light: #e5b8ff;
+  --brand-dark: #b070d0;
+  --brand-gradient: linear-gradient(135deg, #c084e0 0%, #8b7fd8 40%, #6dd5ff 100%);
+  --secondary: #8b7fd8;
+  --secondary-light: #a89ee8;
   --success: #34d399;
   --warning: #fbbf24;
-  --border: rgba(148, 163, 184, 0.2);
-  --border-glass: rgba(168, 130, 194, 0.25);
-  --shadow-primary: 0 10px 40px -15px rgba(168, 130, 194, 0.4);
-  --shadow-soft: 0 4px 20px -8px rgba(0, 0, 0, 0.5);
-  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.3);
-  --shadow-glow: 0 0 24px rgba(73, 183, 236, 0.25);
+  --border: rgba(200, 132, 224, 0.15);
+  --border-glass: rgba(200, 132, 224, 0.2);
+  --shadow-primary: 0 10px 40px -15px rgba(200, 132, 224, 0.4);
+  --shadow-soft: 0 4px 20px -8px rgba(0, 0, 0, 0.6);
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-glow: 0 0 24px rgba(109, 213, 255, 0.35);
   --blur-light: blur(12px);
   --blur-heavy: blur(20px);
 }
