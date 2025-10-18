@@ -260,6 +260,7 @@
     let currentWordIndex = 0;
     let currentCharIndex = 0;
     let isDeleting = false;
+    let statusIndex = 0;
     
     typedWord.innerHTML = '&nbsp;';
     
@@ -285,9 +286,9 @@
         } else {
           isDeleting = false;
           currentWordIndex = (currentWordIndex + 1) % words.length;
-          const messageIndex = currentWordIndex % statusData.length;
-          statusSymbol.textContent = statusData[messageIndex].symbol;
-          statusText.textContent = statusData[messageIndex].message;
+          statusIndex = (statusIndex + 1) % statusData.length;
+          statusSymbol.textContent = statusData[statusIndex].symbol;
+          statusText.textContent = statusData[statusIndex].message;
           setTimeout(typeWriter, 500);
         }
       }
